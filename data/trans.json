@@ -1,0 +1,540 @@
+{
+  "characters": [
+    {
+      "id": "aki_minoriko",
+      "name": "aki_minoriko"
+    },
+    {
+      "id": "aki_shizuha",
+      "name": "aki_shizuha"
+    },
+    {
+      "id": "alice_margatroid",
+      "name": "alice_margatroid"
+    },
+    {
+      "id": "asakura_rikako",
+      "name": "asakura_rikako"
+    },
+    {
+      "id": "chen",
+      "name": "chen"
+    },
+    {
+      "id": "chirizuka_ubame",
+      "name": "chirizuka_ubame"
+    },
+    {
+      "id": "cirno",
+      "name": "cirno"
+    },
+    {
+      "id": "clownpiece",
+      "name": "clownpiece"
+    },
+    {
+      "id": "daiyousei",
+      "name": "daiyousei"
+    },
+    {
+      "id": "doremy_sweet",
+      "name": "doremy_sweet"
+    },
+    {
+      "id": "ebisu_eika",
+      "name": "ebisu_eika"
+    },
+    {
+      "id": "eternity_larva",
+      "name": "eternity_larva"
+    },
+    {
+      "id": "flandre_scarlet",
+      "name": "flandre_scarlet"
+    },
+    {
+      "id": "fujiwara_no_mokou",
+      "name": "fujiwara_no_mokou"
+    },
+    {
+      "id": "futatsuiwa_mamizou",
+      "name": "futatsuiwa_mamizou"
+    },
+    {
+      "id": "hakurei_reimu",
+      "name": "hakurei_reimu"
+    },
+    {
+      "id": "haniyasushin_keiki",
+      "name": "haniyasushin_keiki"
+    },
+    {
+      "id": "hata_no_kokoro",
+      "name": "hata_no_kokoro"
+    },
+    {
+      "id": "hecatia_lapislazuli",
+      "name": "hecatia_lapislazuli"
+    },
+    {
+      "id": "hieda_no_akyuu",
+      "name": "hieda_no_akyuu"
+    },
+    {
+      "id": "hijiri_byakuren",
+      "name": "hijiri_byakuren"
+    },
+    {
+      "id": "himekaidou_hatate",
+      "name": "himekaidou_hatate"
+    },
+    {
+      "id": "himemushi_momoyo",
+      "name": "himemushi_momoyo"
+    },
+    {
+      "id": "hinanawi_tenshi",
+      "name": "hinanawi_tenshi"
+    },
+    {
+      "id": "hong_meiling",
+      "name": "hong_meiling"
+    },
+    {
+      "id": "horikawa_raiko",
+      "name": "horikawa_raiko"
+    },
+    {
+      "id": "hoshiguma_yuugi",
+      "name": "hoshiguma_yuugi"
+    },
+    {
+      "id": "houjuu_chimi",
+      "name": "houjuu_chimi"
+    },
+    {
+      "id": "houjuu_nue",
+      "name": "houjuu_nue"
+    },
+    {
+      "id": "houraisan_kaguya",
+      "name": "houraisan_kaguya"
+    },
+    {
+      "id": "ibaraki_kasen",
+      "name": "ibaraki_kasen"
+    },
+    {
+      "id": "ibuki_suika",
+      "name": "ibuki_suika"
+    },
+    {
+      "id": "iizunamaru_megumu",
+      "name": "iizunamaru_megumu"
+    },
+    {
+      "id": "imaizumi_kagerou",
+      "name": "imaizumi_kagerou"
+    },
+    {
+      "id": "inaba_tewi",
+      "name": "inaba_tewi"
+    },
+    {
+      "id": "inubashiri_momiji",
+      "name": "inubashiri_momiji"
+    },
+    {
+      "id": "iwanaga_ariya",
+      "name": "iwanaga_ariya"
+    },
+    {
+      "id": "izayoi_sakuya",
+      "name": "izayoi_sakuya"
+    },
+    {
+      "id": "kaenbyou_rin",
+      "name": "kaenbyou_rin"
+    },
+    {
+      "id": "kagiyama_hina",
+      "name": "kagiyama_hina"
+    },
+    {
+      "id": "kaku_seiga",
+      "name": "kaku_seiga"
+    },
+    {
+      "id": "kamishirasawa_keine",
+      "name": "kamishirasawa_keine"
+    },
+    {
+      "id": "kana_anaberal",
+      "name": "kana_anaberal"
+    },
+    {
+      "id": "kasodani_kyouko",
+      "name": "kasodani_kyouko"
+    },
+    {
+      "id": "kawashiro_nitori",
+      "name": "kawashiro_nitori"
+    },
+    {
+      "id": "kazami_yuuka",
+      "name": "kazami_yuuka"
+    },
+    {
+      "id": "kicchou_yachie",
+      "name": "kicchou_yachie"
+    },
+    {
+      "id": "kijin_seija",
+      "name": "kijin_seija"
+    },
+    {
+      "id": "kirisame_marisa",
+      "name": "kirisame_marisa"
+    },
+    {
+      "id": "kishin_sagume",
+      "name": "kishin_sagume"
+    },
+    {
+      "id": "kisume",
+      "name": "kisume"
+    },
+    {
+      "id": "kitashirakawa_chiyuri",
+      "name": "kitashirakawa_chiyuri"
+    },
+    {
+      "id": "koakuma",
+      "name": "koakuma"
+    },
+    {
+      "id": "kochiya_sanae",
+      "name": "kochiya_sanae"
+    },
+    {
+      "id": "komakusa_sannyo",
+      "name": "komakusa_sannyo"
+    },
+    {
+      "id": "komano_aunn",
+      "name": "komano_aunn"
+    },
+    {
+      "id": "komeiji_koishi",
+      "name": "komeiji_koishi"
+    },
+    {
+      "id": "komeiji_satori",
+      "name": "komeiji_satori"
+    },
+    {
+      "id": "konpaku_youmu",
+      "name": "konpaku_youmu"
+    },
+    {
+      "id": "kudamaki_tsukasa",
+      "name": "kudamaki_tsukasa"
+    },
+    {
+      "id": "kumoi_ichirin",
+      "name": "kumoi_ichirin"
+    },
+    {
+      "id": "kurodani_yamame",
+      "name": "kurodani_yamame"
+    },
+    {
+      "id": "kurokoma_saki",
+      "name": "kurokoma_saki"
+    },
+    {
+      "id": "letty_whiterock",
+      "name": "letty_whiterock"
+    },
+    {
+      "id": "lily_white",
+      "name": "lily_white"
+    },
+    {
+      "id": "luna_child",
+      "name": "luna_child"
+    },
+    {
+      "id": "lunasa_prismriver",
+      "name": "lunasa_prismriver"
+    },
+    {
+      "id": "lyrica_prismriver",
+      "name": "lyrica_prismriver"
+    },
+    {
+      "id": "maribel_hearn",
+      "name": "maribel_hearn"
+    },
+    {
+      "id": "matara_okina",
+      "name": "matara_okina"
+    },
+    {
+      "id": "medicine_melancholy",
+      "name": "medicine_melancholy"
+    },
+    {
+      "id": "merlin_prismriver",
+      "name": "merlin_prismriver"
+    },
+    {
+      "id": "michigami_nareko",
+      "name": "michigami_nareko"
+    },
+    {
+      "id": "mitsugashira_enoko",
+      "name": "mitsugashira_enoko"
+    },
+    {
+      "id": "miyako_yoshika",
+      "name": "miyako_yoshika"
+    },
+    {
+      "id": "mizuhashi_parsee",
+      "name": "mizuhashi_parsee"
+    },
+    {
+      "id": "mononobe_no_futo",
+      "name": "mononobe_no_futo"
+    },
+    {
+      "id": "morichika_rinnosuke",
+      "name": "morichika_rinnosuke"
+    },
+    {
+      "id": "moriya_suwako",
+      "name": "moriya_suwako"
+    },
+    {
+      "id": "motoori_kosuzu",
+      "name": "motoori_kosuzu"
+    },
+    {
+      "id": "murasa_minamitsu",
+      "name": "murasa_minamitsu"
+    },
+    {
+      "id": "mystia_lorelei",
+      "name": "mystia_lorelei"
+    },
+    {
+      "id": "nagae_iku",
+      "name": "nagae_iku"
+    },
+    {
+      "id": "nazrin",
+      "name": "nazrin"
+    },
+    {
+      "id": "nippaku_zanmu",
+      "name": "nippaku_zanmu"
+    },
+    {
+      "id": "nishida_satono",
+      "name": "nishida_satono"
+    },
+    {
+      "id": "niwatari_kutaka",
+      "name": "niwatari_kutaka"
+    },
+    {
+      "id": "okazaki_yumemi",
+      "name": "okazaki_yumemi"
+    },
+    {
+      "id": "okunoda_miyoi",
+      "name": "okunoda_miyoi"
+    },
+    {
+      "id": "onozuka_komachi",
+      "name": "onozuka_komachi"
+    },
+    {
+      "id": "patchouli_knowledge",
+      "name": "patchouli_knowledge"
+    },
+    {
+      "id": "reisen_udongein_inaba",
+      "name": "reisen_udongein_inaba"
+    },
+    {
+      "id": "reiuji_utsuho",
+      "name": "reiuji_utsuho"
+    },
+    {
+      "id": "remilia_scarlet",
+      "name": "remilia_scarlet"
+    },
+    {
+      "id": "rumia",
+      "name": "rumia"
+    },
+    {
+      "id": "ruukoto",
+      "name": "ruukoto"
+    },
+    {
+      "id": "saigyouji_yuyuko",
+      "name": "saigyouji_yuyuko"
+    },
+    {
+      "id": "sakata_nemuno",
+      "name": "sakata_nemuno"
+    },
+    {
+      "id": "satsuki_rin",
+      "name": "satsuki_rin"
+    },
+    {
+      "id": "sekibanki",
+      "name": "sekibanki"
+    },
+    {
+      "id": "shameimaru_aya",
+      "name": "shameimaru_aya"
+    },
+    {
+      "id": "shiki_eiki",
+      "name": "shiki_eiki"
+    },
+    {
+      "id": "soga_no_tojiko",
+      "name": "soga_no_tojiko"
+    },
+    {
+      "id": "son_biten",
+      "name": "son_biten"
+    },
+    {
+      "id": "star_sapphire",
+      "name": "star_sapphire"
+    },
+    {
+      "id": "sukuna_shinmyoumaru",
+      "name": "sukuna_shinmyoumaru"
+    },
+    {
+      "id": "sunny_milk",
+      "name": "sunny_milk"
+    },
+    {
+      "id": "tamatsukuri_misumaru",
+      "name": "tamatsukuri_misumaru"
+    },
+    {
+      "id": "tatara_kogasa",
+      "name": "tatara_kogasa"
+    },
+    {
+      "id": "teireida_mai",
+      "name": "teireida_mai"
+    },
+    {
+      "id": "tenkajin_chiyari",
+      "name": "tenkajin_chiyari"
+    },
+    {
+      "id": "tenkyuu_chimata",
+      "name": "tenkyuu_chimata"
+    },
+    {
+      "id": "toramaru_shou",
+      "name": "toramaru_shou"
+    },
+    {
+      "id": "toutetsu_yuuma",
+      "name": "toutetsu_yuuma"
+    },
+    {
+      "id": "toyosatomimi_no_miko",
+      "name": "toyosatomimi_no_miko"
+    },
+    {
+      "id": "tsukumo_benben",
+      "name": "tsukumo_benben"
+    },
+    {
+      "id": "tsukumo_yatsuhashi",
+      "name": "tsukumo_yatsuhashi"
+    },
+    {
+      "id": "usami_renko",
+      "name": "usami_renko"
+    },
+    {
+      "id": "usami_sumireko",
+      "name": "usami_sumireko"
+    },
+    {
+      "id": "ushizaki_urumi",
+      "name": "ushizaki_urumi"
+    },
+    {
+      "id": "wakasagihime",
+      "name": "wakasagihime"
+    },
+    {
+      "id": "watari_nina",
+      "name": "watari_nina"
+    },
+    {
+      "id": "watatsuki_no_toyohime",
+      "name": "watatsuki_no_toyohime"
+    },
+    {
+      "id": "watatsuki_no_yorihime",
+      "name": "watatsuki_no_yorihime"
+    },
+    {
+      "id": "wriggle_nightbug",
+      "name": "wriggle_nightbug"
+    },
+    {
+      "id": "yagokoro_eirin",
+      "name": "yagokoro_eirin"
+    },
+    {
+      "id": "yakumo_ran",
+      "name": "yakumo_ran"
+    },
+    {
+      "id": "yakumo_yukari",
+      "name": "yakumo_yukari"
+    },
+    {
+      "id": "yamashiro_takane",
+      "name": "yamashiro_takane"
+    },
+    {
+      "id": "yasaka_kanako",
+      "name": "yasaka_kanako"
+    },
+    {
+      "id": "yatadera_narumi",
+      "name": "yatadera_narumi"
+    },
+    {
+      "id": "yomotsu_hisami",
+      "name": "yomotsu_hisami"
+    },
+    {
+      "id": "yorigami_shion",
+      "name": "yorigami_shion"
+    },
+    {
+      "id": "yuiman_asama",
+      "name": "yuiman_asama"
+    }
+  ]
+}
