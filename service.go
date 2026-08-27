@@ -1,6 +1,7 @@
 package touhouwho
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"image"
@@ -10,14 +11,22 @@ import (
 	"sort"
 	"sync"
 
+	// 注册常见图片格式解码器，支持 PNG, JPEG, GIF, BMP, WebP, TIFF 等
+	_ "image/gif"
+	_ "image/jpeg"
+	_ "image/png"
+
 	"github.com/disintegration/imaging"
+	_ "golang.org/x/image/bmp"
+	_ "golang.org/x/image/tiff"
+	_ "golang.org/x/image/webp"
 	"github.com/yalue/onnxruntime_go"
 )
 
 // InitOptions 初始化配置
 type InitOptions struct {
 	ModelPath         string // ONNX 模型路径 (必填)
-	OnnxModelDataPath string // 外部权重 .data 文件路径 (选填，若为空则自动检测 ModelPath+".data")
+	OnnxModelDataPath string // 外部权重 .data 文件路径 (选填)
 	TransPath         string // trans.json 字典路径 (必填)
 	CustomDLLPath     string // ONNX Runtime 动态库路径 (选填)
 	ImageSize         int    // 输入尺寸，默认 384
@@ -33,9 +42,7 @@ type PredictionItem struct {
 
 // PredictResult 推理结果结构
 type PredictResult struct {
-	// Items 按概率从大到小排列的结果切片 (独立副本，外部修改不影响内部)
-	Items []PredictionItem `json:"items"`
-	// ProbMap 角色名/ID到概率的映射
+	Items   []PredictionItem   `json:"items"`
 	ProbMap map[string]float32 `json:"prob_map"`
 }
 
@@ -70,18 +77,15 @@ func (s *Service) Init(opts InitOptions) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	// 1. 设置默认值
 	if opts.ImageSize <= 0 {
 		opts.ImageSize = 384
 	}
 	s.imageSize = opts.ImageSize
 
-	// 2. 检查模型文件
 	if _, err := os.Stat(opts.ModelPath); err != nil {
 		return fmt.Errorf("model file not found at %s: %w", opts.ModelPath, err)
 	}
 
-	// 3. 初始化 ONNX Runtime 环境 (跨平台默认回退)
 	dllPath := opts.CustomDLLPath
 	if dllPath == "" {
 		switch runtime.GOOS {
@@ -100,7 +104,6 @@ func (s *Service) Init(opts InitOptions) error {
 	}
 	s.initEnv = true
 
-	// 4. 加载 trans.json
 	characters, charMap, err := s.loadTrans(opts.TransPath)
 	if err != nil {
 		return fmt.Errorf("failed to load translation file: %w", err)
@@ -108,7 +111,6 @@ func (s *Service) Init(opts InitOptions) error {
 	s.characters = characters
 	s.charMap = charMap
 
-	// 5. 创建 ONNX 会话
 	sessionOptions, err := onnxruntime_go.NewSessionOptions()
 	if err != nil {
 		return fmt.Errorf("failed to create session options: %w", err)
@@ -146,12 +148,28 @@ func (s *Service) Destroy() error {
 	return nil
 }
 
-// Predict 根据图片路径进行推理预测
+// Predict 根据图片文件路径进行推理预测
 func (s *Service) Predict(imagePath string, threshold ...float32) (*PredictResult, error) {
 	img, err := imaging.Open(imagePath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open image: %w", err)
 	}
+	return s.PredictImage(img, threshold...)
+}
+
+// PredictByBinary 【新增】传入图片二进制字节数组进行推理分类 (支持 PNG, JPEG, GIF, BMP, WebP 等)
+func (s *Service) PredictByBinary(imgBytes []byte, threshold ...float32) (*PredictResult, error) {
+	if len(imgBytes) == 0 {
+		return nil, fmt.Errorf("image binary data is empty")
+	}
+
+	// 解码二进制流（imaging.Decode 会自动识别格式并处理 EXIF 方向旋转）
+	reader := bytes.NewReader(imgBytes)
+	img, err := imaging.Decode(reader)
+	if err != nil {
+		return nil, fmt.Errorf("failed to decode image binary: %w", err)
+	}
+
 	return s.PredictImage(img, threshold...)
 }
 
@@ -239,7 +257,6 @@ func (s *Service) PredictImage(img image.Image, threshold ...float32) (*PredictR
 	}, nil
 }
 
-// 图像预处理 (Lanczos 缩放 + ImageNet 归一化 + NCHW 排列)
 func (s *Service) preprocess(img image.Image) []float32 {
 	resized := imaging.Resize(img, s.imageSize, s.imageSize, imaging.Lanczos)
 	bounds := resized.Bounds()
@@ -258,15 +275,14 @@ func (s *Service) preprocess(img image.Image) []float32 {
 			bFloat := float32(b) / 65535.0
 
 			idx := y*w + x
-			pixels[0*channelSize+idx] = (rFloat - mean[0]) / std[0] // R
-			pixels[1*channelSize+idx] = (gFloat - mean[1]) / std[1] // G
-			pixels[2*channelSize+idx] = (bFloat - mean[2]) / std[2] // B
+			pixels[0*channelSize+idx] = (rFloat - mean[0]) / std[0]
+			pixels[1*channelSize+idx] = (gFloat - mean[1]) / std[1]
+			pixels[2*channelSize+idx] = (bFloat - mean[2]) / std[2]
 		}
 	}
 	return pixels
 }
 
-// 加载角色映射
 func (s *Service) loadTrans(transPath string) ([]string, map[string]string, error) {
 	data, err := os.ReadFile(transPath)
 	if err != nil {
