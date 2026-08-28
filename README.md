@@ -36,7 +36,7 @@
 ## 安装
 
 ```bash
-go get github.com/qwqpap/go-touhou-who
+go get github.com/scarletborder/go-touhou-who
 ```
 
 ---
