@@ -1,4 +1,4 @@
-module go-touhou-who
+module github.com/scarletborder/go-touhou-who
 
 go 1.25.3
 

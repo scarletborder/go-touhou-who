@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	touhouwho "go-touhou-who"
+	touhouwho "github.com/scarletborder/go-touhou-who"
 )
 
 // findExistingPath 辅助函数：按顺序查找可用的文件路径（兼容从根目录或子包运行 go test）
